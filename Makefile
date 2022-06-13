@@ -1,12 +1,12 @@
 mcp:
-	gcc -g main.c -o bin/mcp
+	gcc -g -o mcp mcp.c
 clean:
-	rm -f bin/mcp
+	rm -f mcp
 tar:
 	@read -p "version? : " VERSION \
-	&& tar --exclude-vcs --exclude='bin' -czvf ../mcp-$${VERSION}.tar.gz .
+	&& tar --exclude-vcs --exclude='.vscode' -czvf ../mcp-$${VERSION}.tar.gz .
 install:
 	mkdir -p $(DESTDIR)/usr/bin
-	install -m 0755 bin/mcp $(DESTDIR)/usr/bin/mcp 
+	install -m 0755 mcp $(DESTDIR)/usr/bin/mcp 
 remove:
 	rm -f bin/mcp
