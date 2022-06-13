@@ -1,2 +1,2 @@
-# masterc
+# MCP
 Master C Programming
