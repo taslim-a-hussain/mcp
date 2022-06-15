@@ -1,5 +1,5 @@
 mcp:
-	gcc -g -o mcp mcp.c
+	gcc -g -fpie -o mcp mcp.c
 clean:
 	rm -f mcp
 tar:
